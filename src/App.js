@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import About from './components/About';
+//import About from './components/About';
 import React, { useState } from 'react';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-// v:16:- copying from react router dom
-import {BrowserRouter as Router,Routes,Route,} from "react-router-dom";
+// v:16:- copying from react router dom:-
+//import {BrowserRouter as Router,Routes,Route,} from "react-router-dom";
 
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    {/*<Router>*/}
     {/*  prop type korle eta command out korbo*/}
   <Navbar title = "TextUtils" aboutText="About us" mode={mode} toggleMode={toggleMode}/>
 
@@ -57,14 +57,16 @@ function App() {
   {/*<navbar title ="TextUtils"/>*/}
 
   <div className="container my-3">
-  <Routes>
+  {/*<Routes>
           <Route path="/about" element={<About/>}/>
           <Route path="/" element={<TextForm showAlert={showAlert} heading= "Enter the text to analyze below" mode={mode}/> }/>
-           {/*<TextForm showAlert={showAlert} heading= "Enter the text to analyze below" mode={mode}/> {/*here adding showAlert={showAlert} for showing alert in textbox*/} 
-  </Routes>      
+  </Routes>*/}   
+
+          <TextForm showAlert={showAlert} heading= "Enter the text to analyze below" mode={mode}/> {/*here adding showAlert={showAlert} for showing alert in textbox*/} 
+ 
   {/*<About/> {/*Adding this for Alert.js file */}
   </div>
-  </Router>
+  {/*</Router>*/}
    </>
   );
 }
